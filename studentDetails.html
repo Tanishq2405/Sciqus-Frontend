@@ -66,17 +66,27 @@
         />
       </div>
       <div class="container">
-        <h1>Name</h1>
-        <h3>Email</h3>
-        <h3>UserID</h3>
-        <h3>Password</h3>
+        <h1 id="name">Name</h1>
+        <h3 id="mail">Email</h3>
+        <h3 id="contact">Contact</h3>
+        <h3 id="user">User</h3>
       </div>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+      
+        const name = localStorage.getItem("name")
+        document.getElementById("name").innerHTML = name
+  
+        const mail = localStorage.getItem("mail")
+        document.getElementById("mail").innerHTML = mail
+  
+        const contact = localStorage.getItem("contact")
+        document.getElementById("contact").innerHTML = contact
+  
+        const user = localStorage.getItem("username")
+        document.getElementById("user").innerHTML = user
+      
+    </script>
   </body>
 </html>

@@ -1,11 +1,3 @@
-function redirectToDashboard(userRole) {
-  if (userRole === "admin") {
-    window.location.href = "admin-dashboard.html";
-  } else {
-    window.location.href = "user-dashboard.html";
-  }
-}
-
 function validateForm() {
   var username = document.getElementById("username").value;
   var password = document.getElementById("password").value;
@@ -40,6 +32,26 @@ function forgotPassword() {
   alert("Password sent on registered mail");
 }
 
-function addStudent() {
+function addStudent(event) {
+  const name = document.getElementById("name").value;
+  const mail = document.getElementById("mail").value;
+  const contact = document.getElementById("contact").value;
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  localStorage.setItem("name", name);
+  localStorage.setItem("mail", mail);
+  localStorage.setItem("contact", contact);
+  localStorage.setItem("username", username);
+  localStorage.setItem("password", password);
+
   alert("Student added successfully..!");
+}
+
+function redirectToDashboard(userRole) {
+  if (userRole === "admin") {
+    window.location.href = "admin-dashboard.html";
+  } else {
+    window.location.href = "user-dashboard.html";
+  }
 }
